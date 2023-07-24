@@ -50,7 +50,7 @@ void RealEntrypoint(char* argument_string);
 //}
 int main(int argc, char* argv[]) {
 	if (argc > 1) {
-		// 传入了附加参数，调用RealEntrypoint函数进行处理
+		// 浼犲叆浜嗛檮鍔犲弬鏁帮紝璋冪敤RealEntrypoint鍑芥暟杩涜澶勭悊
 		RealEntrypoint(argv[1]);
 	}
 	else {
@@ -84,11 +84,11 @@ void RealEntrypoint(char* argument_string) {
 			redirector.Start();
 		}
 	} catch (const std::invalid_argument&) {
-		std::cout << "Redirect Usage: PortBender redirect FakeDstPort RedirectedPort" << std::endl;
-		std::cout << "Backdoor Usage: PortBender backdoor FakeDstPort RedirectedPort password" << std::endl;
+		std::cout << "Redirect Usage: PortBender \"redirect FakeDstPort RedirectedPort\"" << std::endl;
+		std::cout << "Backdoor Usage: PortBender \"backdoor FakeDstPort RedirectedPort password\"" << std::endl;
 		std::cout << "Example:" << std::endl;
-		std::cout << "\tPortBender redirect 445 8445" << std::endl;
-		std::cout << "\tPortBender backdoor 443 3389 praetorian.antihacker" << std::endl;
+		std::cout << "\tPortBender \"redirect 445 8445\"" << std::endl;
+		std::cout << "\tPortBender \"backdoor 443 3389 praetorian.antihacker\"" << std::endl;
 		std::cout << std::flush;
 	}
 }
