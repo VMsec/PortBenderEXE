@@ -18,4 +18,4 @@ Example:
 
 https://reqrypt.org/windivert-faq.html#q5
 
-代码中fix了win2003的编译相关报错，但注意win2003不支持WinDivert.sys驱动，所以无法使用。
+代码中fix了win2003的编译相关报错，但注意 Windows XP、Windows 2003 或早期版本的 Windows 不支持WinDivert.sys驱动，所以该系统版本下无法使用。
